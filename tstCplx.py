@@ -42,6 +42,11 @@ class test_LBcplx(unittest.TestCase):
         self.assertAlmostEqual(conju[1],3)
         conju = lc.conju((1, -1))
         self.assertAlmostEqual(conju[1], 1)
+    def test_faseCplx(self):
+        fase = lc.faseCplx((5,-3))
+        self.assertAlmostEqual(fase,-0.5404195)
+        fase = lc.faseCplx((4,1))
+        self.assertAlmostEqual(fase,0.244978663)
     def test_crt_plr(self):
         result = lc.crt_plr((5,-3))
         self.assertAlmostEqual(result[0],math.sqrt(34))
